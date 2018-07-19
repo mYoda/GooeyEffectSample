@@ -43,7 +43,7 @@ class GooeyMovementShower: UIView, UIGestureRecognizerDelegate {
         baseLineShapeView.frame = CGRect(origin: CGPoint(x: 0, y: initialFrame.origin.y),
                                          size: CGSize(width: frame.width, height: max(50, initialFrame.height + 20)))
         baseLineShapeView.clipsToBounds = true
-        baseLineShapeView.backgroundColor = #colorLiteral(red: 0.3764705882, green: 0.3803921569, blue: 0.431372549, alpha: 1)
+        baseLineShapeView.backgroundColor = #colorLiteral(red: 0.5098039216, green: 0.4784313725, blue: 0.9019607843, alpha: 1)// #colorLiteral(red: 0.3764705882, green: 0.3803921569, blue: 0.431372549, alpha: 1)
         initBaseLinePointA = baseLineShapeView.frame.origin
         
         
