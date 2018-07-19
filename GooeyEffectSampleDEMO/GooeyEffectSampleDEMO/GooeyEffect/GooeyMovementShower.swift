@@ -34,7 +34,6 @@ class GooeyMovementShower: UIView, UIGestureRecognizerDelegate {
         initialFrame = CGRect(origin: origin, size: size)
         
         animationShapeView.frame = initialFrame
-        animationShapeView.frame.origin.y -= 150
         animationShapeView.clipsToBounds = true
         animationShapeView.layer.cornerRadius = 30
         animationShapeView.backgroundColor = #colorLiteral(red: 0.5098039216, green: 0.4784313725, blue: 0.9019607843, alpha: 1)
