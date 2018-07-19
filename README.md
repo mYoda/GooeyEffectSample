@@ -1,7 +1,7 @@
 # GooeyEffectSample
 Example how to make gooey effect
 
-<img  width="700" src="/ReadmeSources/1.png" />
+<img  width="600" src="/ReadmeSources/1.png" />
 <img align="right"  width="200" src="/ReadmeSources/Gooey.gif" />
 
 ---
