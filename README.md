@@ -1,9 +1,10 @@
 # GooeyEffectSample
 Example how to make gooey effect
 
-<img  width="600" src="/ReadmeSources/1.png" />
-<img align="right"  width="200" src="/ReadmeSources/Gooey.gif" />
-
+<img align="left" width="620" src="/ReadmeSources/1.png" />
+<img   width="230" src="/ReadmeSources/Gooey.gif" />
+   
+      
 ---
 ### Theory
 The solution is to find tangents by calculation of intersection of two circles
