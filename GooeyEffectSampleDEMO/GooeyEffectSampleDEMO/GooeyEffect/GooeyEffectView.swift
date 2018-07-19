@@ -95,7 +95,6 @@ class GooeyEffectView: UIView, UIGestureRecognizerDelegate, CAAnimationDelegate 
         
         for layer in pointsDictionaryLayers {
             self.layer.addSublayer(layer.value)
-            print("added layer: \(layer.key)")
         }
     }
     
@@ -191,7 +190,6 @@ class GooeyEffectView: UIView, UIGestureRecognizerDelegate, CAAnimationDelegate 
         //Intersection of two circles
         //Discussion http://stackoverflow.com/questions/3349125/circle-circle-intersection-points
         //Description http://paulbourke.net/geometry/circlesphere/
-        //Objective-c algorithm http://paulbourke.net/geometry/circlesphere/CircleCircleIntersection2.m
         
         //Calculate distance between centres of circle
         let d = c1.minus(c2).length()
@@ -262,6 +260,14 @@ class GooeyEffectView: UIView, UIGestureRecognizerDelegate, CAAnimationDelegate 
         let c2 = CGPoint(x: x3, y: y3)
         let c1r = cornerRadius
         var (_, p2) = findIntersection(centerCircle1: c1, radiusCircle1: c1r, centerCircle2: c2)
+        
+        if debugMode {
+            addPointsLayer(forkey: "InterceptionLeft", points: [c1], radius: c1r, color: #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), opacity: 0.3)
+            let d = c1.minus(c2).length()
+            let c2r = d
+            addPointsLayer(forkey: "InterceptionLeftC2", points: [c2], radius: c2r, color: #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1), opacity: 0.3)
+        }
+        
         //when something wrong in findIntersection pass left center point
         if p2 == CGPoint.zero {
             p2 = CGPoint(x: centerfigCircle.x - cornerRadius, y: centerfigCircle.y)
@@ -414,7 +420,6 @@ class GooeyEffectView: UIView, UIGestureRecognizerDelegate, CAAnimationDelegate 
             return false
         }()
         
-        print("isAfterAvulsion = \(isAfterAvulsion)")
         //do not need to draw shape under baseLine or after avulsion
         if distance <= -heightFigure ||
             isAfterAvulsion == true {
@@ -445,7 +450,6 @@ class GooeyEffectView: UIView, UIGestureRecognizerDelegate, CAAnimationDelegate 
             addPointsLayer(forkey: "FigurePointsAB", points: [pointFigureA, pointFigureB], radius: 3, color: #colorLiteral(red: 0.8901960784, green: 0.6549019608, blue: 0.5058823529, alpha: 1), opacity: 1)
             
             addLineLayer(forKey: "BetweenFigAndCPsleft", fromPoint: cpLeft2, toPoint: point1, color: #colorLiteral(red: 0.1090076491, green: 0.808973074, blue: 0.1021158919, alpha: 1), opacity: 1)
-            addLineLayer(forKey: "BetweenFigAndCPsRight", fromPoint: cpRight2, toPoint: point2, color: #colorLiteral(red: 0.1090076491, green: 0.808973074, blue: 0.1021158919, alpha: 1), opacity: 1)
             
             let leftPoints =  getCubeCurveApexPoint(p0: point0, p1: cpLeft1, p2: cpLeft2, p3: point1)
             let rightPoints = getCubeCurveApexPoint(p0: point2, p1: cpRight2, p2: cpRight1, p3: point3)
