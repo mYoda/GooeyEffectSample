@@ -4,6 +4,13 @@ Example how to make gooey effect
 <img  width="700" src="/ReadmeSources/1.png" />
 
 ---
+### Theory
+The solution is to find tangents by calculation of intersection of two circles
+https://www.mathsisfun.com/geometry/construct-circletangent.html
+        
+Circles and spheres theory:
+http://paulbourke.net/geometry/circlesphere/
+
 ### Usage
 
   1. Run DEMO project
