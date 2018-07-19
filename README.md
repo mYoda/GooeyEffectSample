@@ -14,6 +14,7 @@ https://en.wikipedia.org/wiki/B%C3%A9zier_curve
 
 To find correct control points for Bézier curves, we are using method "intersection of two circles".
 The solution is to find tangents by calculation of intersection of two circles
+
 see a demo: https://www.mathsisfun.com/geometry/construct-circletangent.html
         
 Circles and spheres theory:
