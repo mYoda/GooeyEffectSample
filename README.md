@@ -31,3 +31,7 @@ class GooeyEffectView: UIView, UIGestureRecognizerDelegate, CAAnimationDelegate 
     let debugMode = true
     
 ```    
+
+## License
+
+GooeyEffectSample is available under the MIT license. See the LICENSE file for more info.
