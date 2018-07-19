@@ -543,7 +543,6 @@ class GooeyEffectView: UIView, UIGestureRecognizerDelegate, CAAnimationDelegate 
             pointsPath.addArc(withCenter: p, radius: CGFloat(radius), startAngle: CGFloat(), endAngle: CGFloat.pi * 2, clockwise: true)
         }
         
-        
         return pointsPath
     }
     //for debug use this method to add points into self.layer
@@ -558,9 +557,6 @@ class GooeyEffectView: UIView, UIGestureRecognizerDelegate, CAAnimationDelegate 
             pointsDictionaryLayers[key]?.opacity = Float(opacity)
             pointsDictionaryLayers[key]?.lineWidth = 1
             pointsDictionaryLayers[key]?.path = generateCirclePointsPath(forPoints: points, withRadius: radius).cgPath
-            
         }
     }
-    
-    
 }
