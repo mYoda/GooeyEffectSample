@@ -184,12 +184,12 @@ class GooeyEffectView: UIView, UIGestureRecognizerDelegate, CAAnimationDelegate 
     //
     //
     private func findIntersection(centerCircle1 c1: CGPoint, radiusCircle1 c1r: CGFloat, centerCircle2 c2: CGPoint) -> (CGPoint, CGPoint) {
-        //The solution is to find tangents by calculation of intersection of two circles
-        // https://www.mathsisfun.com/geometry/construct-circletangent.html
-        
-        //Intersection of two circles
-        //Discussion http://stackoverflow.com/questions/3349125/circle-circle-intersection-points
-        //Description http://paulbourke.net/geometry/circlesphere/
+//        The solution is to find tangents by calculation of intersection of two circles
+//         https://www.mathsisfun.com/geometry/construct-circletangent.html
+//
+//        Intersection of two circles
+//        Discussion http://stackoverflow.com/questions/3349125/circle-circle-intersection-points
+//        Description http://paulbourke.net/geometry/circlesphere/
         
         //Calculate distance between centres of circle
         let d = c1.minus(c2).length()
